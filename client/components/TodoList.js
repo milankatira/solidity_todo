@@ -20,11 +20,9 @@ const TodoList = ({deleteTask, setinput, input, addTask, tasks }) => (
       />
     </form>
     <ul>
-      {tasks.map((i) => {
-console.log(i,"i")
-
-return <Task text={i.taskText} deleteTask={deleteTask(i.id)} />
-      }
+      {tasks.map((i) => (
+           <Task key={i.id} text={i.taskText} deleteTask={deleteTask(i.id)} />
+        )
       )}
     </ul>
   </div>
