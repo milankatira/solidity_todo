@@ -51,6 +51,10 @@ export default function Home() {
   const getAllTasks = async () => {
     try {
       const { ethereum } = window;
+      if (!ethereum) {
+        console.log("Metamask not detected");
+        return;
+      }
 
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
@@ -81,8 +85,13 @@ export default function Home() {
 
     try {
       const { ethereum } = window;
+      if (!ethereum) {
+        console.log("Metamask not detected");
+        return;
+      }
 
       if (ethereum) {
+        
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(
