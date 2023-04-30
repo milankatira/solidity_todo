@@ -4,7 +4,7 @@ import Task from './Task'
 const TodoList = ({deleteTask, setinput, input, addTask, tasks }) => (
   <div className="w-[70%] bg-[#354ea3] py-4 px-9 rounded-[30px] overflow-y-scroll">
     <Navbar />
-    <h2 className="text-4xl bolder text-white pb-8">What&apos;s up, Kevin!</h2>
+    <h2 className="text-4xl bolder text-white pb-8">What&apos;s up</h2>
     <div className="py-3 text-[#7d99e9]">TODAY&apos;S TASKS</div>
     <form className="flex items-center justify-center">
       <input
